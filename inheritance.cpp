@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 class Student {
@@ -13,7 +13,7 @@ public:
         return name;
     }
 
-    int getRollNo() {
+    int getRollNo(){
         return rollno;
     }
    int getAge() {
@@ -52,3 +52,56 @@ int main() {
     
     return 0;
 }
+
+//inheritance 
+#include<iostream>
+using namespace std;
+class Animal{
+    public:
+    void eat(){
+        cout<<"eating"<<endl;
+    }
+};
+class dog: public Animal{
+    public:
+    void bark(){
+        cout<<"barking"<<endl;
+    }
+};
+int main(){
+    dog d1;
+    d1.bark();
+    d1.bark();
+}*/
+#include <iostream>
+using namespace std;
+
+class Animal{
+public:
+    void eat(){
+        cout <<"Eating"<< endl;
+    }
+};
+class Dog : public Animal {
+public:
+void bark() {
+cout << "Barking" << endl;
+}
+};
+class Cat : public Animal {
+public:
+void meow() {
+cout<<"Meowing"<< endl;
+}
+};
+int main() {
+    Dog d1;
+    Cat c1;
+
+    d1.eat(); // Inherited method from Animal class
+    d1.bark();// Method of Dog class
+
+    c1.eat(); // Inherited method from Animal class
+    c1.meow();// Method of Cat class
+    return 0; 
+  }
