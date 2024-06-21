@@ -2,7 +2,7 @@
 //two types- 1- compile time polymorphism 2- Run time Polymorphism
 //COmpile time polymorphism include -- Function overloading
 //example
-/* #include<iostream>
+/*#include<iostream>
 using namespace std;
 class count{
     private:
@@ -13,6 +13,7 @@ class count{
           }
           void operator ++(){
             value +=10;
+            
           }  
  
 void display(){
@@ -45,5 +46,5 @@ class Derived: public Base{
 int main(){
     Derived d1;
     Base*ptr=&d1;
-    ptr->print();
-     }
+    ptr->print(); 
+    }
