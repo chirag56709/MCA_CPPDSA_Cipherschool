@@ -148,3 +148,7 @@ int main() {
 }
 */
 
+problem
+approach
+TIME
+space
