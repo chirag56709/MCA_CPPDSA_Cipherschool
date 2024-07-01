@@ -17,9 +17,9 @@ int main(){
     cout << "Original character: " << uppercaseChar << endl;
     cout << "Lowercase character: " << lowercaseChar << endl;
 
-    return 0;
+    return 0;]
 }
-*/
+
 #include<iostream>
 using namespace std;
 string replaceWhitespace(string str) {
@@ -36,3 +36,5 @@ int main(){
     cout<<input<<endl;
     cout<<replaced<<endl;
 }
+*/
+
