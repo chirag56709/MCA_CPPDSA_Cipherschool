@@ -1,82 +1,71 @@
-/* #include<iostream>
-using namespace std;
-int main(){
-    //vreating 2d array
-    int arr[3][4];
-   for(int i=0;i<3;i++){
-    for(int j=0;j<4;j++){
-        cin>>arr[i][j];
-    }
-   }
- 
- for(int i=0;i<3;i++){
-    for(int j=0;j<4;j++){
-        cout<<arr[i][j]<<" ";
-    }
-    cout<<endl;
-}
-return 0;
-}
-
 #include<iostream>
 using namespace std;
-bool keyispresent(int arr[][4],int target,int row,int col){
-    for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            if (target==arr[i][j]){
-               return true;
-            }
-            return false;
+
+bool isKeyPresent(int arr[][4], int target, int row, int col){
+    for(int row = 0; row < 3; row++){
+        for(int col = 0; col < 4; col++){
+            if(arr[row][col] == target) return true;
         }
     }
+    return false;
 }
+
+void printSum(int arr[][4], int row, int col){
+    for(int row = 0; row < 3; row++){
+        int sum = 0;
+        for(int col = 0; col < 4; col++){
+            sum += arr[row][col];
+        }
+        cout << sum << " ";
+    }
+    cout << endl;
+}
+
+int rowSum(int arr[][4], int row, int col){
+    int max = INT_MIN;
+    int rowIndex = -1;
+
+    for(int row = 0; row < 3; row++){
+        int sum = 0;
+        for(int col = 0; col < 4; col++){
+            sum += arr[row][col];
+        }
+        if(sum > max){
+            max = sum;
+            rowIndex = row;
+        }
+    }
+    cout << "Maximum sum is : " << max << endl;
+    return rowIndex;
+}
+
+void wavePrint(int arr[][4], int row, int col){
+    for(int i = 0; i < 4; i++){
+        if(i%2 ==1){
+            for(int j = row - 1; j >= 0; j--){
+                cout <<arr[j][i] << " ";
+            } 
+        }
+        else{
+            for(int j = 0; j < 3; j++){
+                cout <<arr[j][i] << " ";
+            } 
+        }
+
+    }
+}
+
 int main(){
-    int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
-   cout<<keyispresent(arr,9,3,4);
-    }
+    int arr[3][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
 
-#include<iostream>
-using namespace std;
-int sumofarray(int arr[3][4],int col,int row){
-    int sum=0;
-    for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            sum+=arr[i][j];
-        }
-    }
-    return sum;
+    // int target;
+    // cin >> target;
+
+    // if(isKeyPresent(arr,target,3,4)) cout << "Key is present";
+    // else cout << "Key is not present";
+
+
+    // cout << rowSum(arr,3,4);
+
+    wavePrint(arr,3,4);
 }
-int main(){
-    int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
-        cout<<sumofarray(arr,4,3);
-    }
-    
-#include <iostream>
-using namespace std;
-
-void waveprint(int arr[][4], int row, int col) {
-    for (int i = 0; i < col; i++) {
-        if (i % 2 == 1) {
-            for (int j = row - 1; j >= 0; j--) {
-                cout << arr[j][i] << " ";
-            }
-        } else {
-            for (int j = 0; j < row; j++) {
-                cout << arr[j][i] << " ";
-            }
-        }
-    }
-    cout << endl; // To ensure the output ends with a newline
-}
-
-int main() {
-    int arr[3][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12}
-    };
-    waveprint(arr, 3, 4);
-    return 0;
-}
-*/
-
