@@ -1,31 +1,31 @@
 #include <iostream>
 using namespace std;
 
-class Node {
+class Node{
 public:
     int data;
-    Node* prev;
-    Node* next;
+    Node*prev;
+    Node*next;
 
     Node(int data) {
-        this->data = data;
-        this->prev = nullptr;
-        this->next = nullptr;
+    this->data = data;
+    this->prev = nullptr;
+    this->next = nullptr;
     }
 };
 
-void insertAtHead(Node*& head, int data) {
+void insertAtHead(Node*& head,int data) {
     Node* n = new Node(data);
     if (head == nullptr) {
         head = n;
         return;
-    }
+    } 
     n->next = head;
     head->prev = n;
     head = n;
 }
 
-void insertAtTail(Node*& head, int data) {
+void insertAtTail(Node*& head, int data){
     Node* n = new Node(data);
     if (head == nullptr) {
         head = n;
