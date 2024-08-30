@@ -76,7 +76,7 @@ int main() {
     print(array, 7);
     return 0;
 }
-*/
+
 
 //targetsum
 #include<iostream>
@@ -97,4 +97,37 @@ cout<<pairs<<endl;
 return 0;
 }
 
+#include <iostream>
+using namespace std;
 
+int main() {
+    int array[5];
+    int *ptr = array;  
+    for (int i = 0; i < 5; ++i){
+   cin>>*(ptr + i); 
+    }
+int sum = 0;
+     for (int i = 0; i < 5; ++i){
+sum =sum+ ptr[i];
+    }
+    cout <<"sum of the array is" << sum << endl;
+    
+    return 0;
+}
+
+   #include<iostream>
+   using namespace std;
+   int main(){
+   int arr[]={10,20,30,40,50};
+   int *ptr=arr;
+   cout<<"arr is"<<arr<<endl;
+   cout<<ptr+2<<endl;
+   cout<<*(ptr+2)<<endl;
+   cout<<*(ptr+1)<<endl;
+   ptr=ptr+3;
+   cout<<ptr<<"value"<<*ptr<<endl;
+   cout<<" "<<endl;
+   cout<<(*ptr+1)<<endl;
+   cout<<*(ptr+1)<<endl;
+   }
+   *?

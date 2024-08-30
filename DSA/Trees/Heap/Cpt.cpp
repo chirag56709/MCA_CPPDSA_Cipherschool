@@ -109,6 +109,5 @@ h.insert(5);
 h.insert(9);
 h.print();
 h.deleteFromHeap();
-
 h.print();
 }
